@@ -1,0 +1,173 @@
+main {
+    width: 100%;
+    height: auto;
+    padding: 85px 0 50px;
+
+    .swiper-banner {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                >img {
+                    width: 100%;
+                    display: block;
+                    object-fit: contain;
+                    margin: 0 auto;
+                    padding: 0 40px;
+                }
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 15%;
+            height: 100%;
+            margin: 0;
+            top: 0;
+            opacity: 0.5;
+
+            &:hover,
+            &:active,
+            &.active {
+                opacity: 1;
+            }
+
+            &::before {
+                content: "";
+            }
+
+            &::after {
+                border-color: #f2f2f2 #f2f2f2 transparent;
+                border-style: solid;
+                border-width: 8px 8px 0 0;
+                content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+
+        .swiper-button-prev {
+            transform: scaleX(-1);
+            left: 40px;
+            right: unset;
+        }
+
+        .swiper-button-next {
+            right: 40px;
+            left: unset;
+        }
+
+        .swiper-pagination {
+            bottom: 30px;
+
+            span {
+                background: #ffffff;
+                width: 15px;
+                height: 15px;
+                opacity: 1;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: #c10f0f;
+            }
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 10px;
+        }
+    }
+
+    .marquee {
+        box-shadow: 0 0 13px 3px #dedede;
+        width: 1400px;
+        height: 45px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        margin: 50px auto 50px;
+
+        .title {
+            background: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+            width: 100px;
+            height: 38px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            p {
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+
+        .textBox {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+
+            p {
+                color: #666;
+                font-size: 14px;
+                font-weight: bold;
+                display: inline-block;
+                white-space: nowrap;
+                padding-left: 100%;
+                animation: marquee 15s linear 0s infinite;
+            }
+
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+        }
+    }
+
+    .products {
+        width: 1400px;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 0;
+        margin: 0 auto;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >img {
+                object-fit: contain;
+            }
+
+            p {
+                color: #333;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.5;
+            }
+
+            span {
+                color: #666;
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 1.3;
+            }
+        }
+    }
+}
