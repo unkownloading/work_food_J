@@ -1,19 +1,19 @@
 // 語言
 (function () {
-  const langFace = document.querySelector(".lang");
-  const lis = document.querySelectorAll(".lang > ul li");
-  let p = document.querySelector(".lang p");
+  const langFace = document.querySelector('.lang');
+  const lis = document.querySelectorAll('.lang > ul li');
+  let p = document.querySelector('.lang p');
 
   let click = 0;
-  langFace.addEventListener("click", function () {
+  langFace.addEventListener('click', function () {
     click++;
     click % 2 == 1
-      ? langFace.classList.add("display")
-      : langFace.classList.remove("display");
+      ? langFace.classList.add('display')
+      : langFace.classList.remove('display');
   });
 
   lis.forEach(function (li) {
-    li.addEventListener("click", function (e) {
+    li.addEventListener('click', function (e) {
       let el = e.target;
       p.innerHTML = el.innerHTML;
     });
@@ -22,7 +22,7 @@
 
 // swiper
 (function () {
-  var swiper = new Swiper(".swiper-banner", {
+  var swiper = new Swiper('.swiper-banner', {
     loop: true, //循環
     autoHeight: true, //自動高
     autoplay: {
@@ -36,13 +36,27 @@
 
     pagination: {
       //dot
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
       clickable: true,
     },
     navigation: {
       //arrow
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
+  });
+})();
+
+// menu select
+(function () {
+  const menus = document.querySelectorAll('.menu > ul > li');
+  menus.forEach(function (menu) {
+    const aTag = menu.querySelector('a');
+    menu.addEventListener('mouseover', function (e) {
+      aTag.classList.add('wow', 'animated', 'fadeInDown');
+    });
+    menu.addEventListener('mouseout', function (e) {
+      aTag.classList.remove('wow', 'animated', 'fadeInDown');
+    });
   });
 })();

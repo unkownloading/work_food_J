@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/animate.css">
 </head>
 
 <body>
     <header>
-        <a class="logo" href="./index.html">
+        <a class="logo wow fadeIn" data-wow-duration="2s" data-wow-iteration="infinite" href="./index.html">
             <img src="./img/logo.png" alt="">
         </a>
         <nav class="menu">
@@ -42,7 +43,9 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">線上菜單</a></li>
+                <li>
+                    <a href="#">線上菜單</a>
+                </li>
                 <li>
                     <a href="#">門市資訊</a>
                     <ul class="dropDown">
@@ -57,7 +60,9 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">聯絡我們</a></li>
+                <li>
+                    <a href="#">聯絡我們</a>
+                </li>
             </ul>
         </nav>
         <div class="lang">
@@ -144,5 +149,9 @@
     </footer>
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 
 </html>
