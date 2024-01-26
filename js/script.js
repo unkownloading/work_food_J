@@ -1,3 +1,4 @@
+'use strict';
 // 語言
 (function () {
   const langFace = document.querySelector('.lang');
@@ -60,3 +61,5 @@
     });
   });
 })();
+
+
