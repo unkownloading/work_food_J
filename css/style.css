@@ -90,8 +90,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -155,15 +154,9 @@ html body header {
   background: #fff;
   width: 100%;
   height: 85px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -175,12 +168,9 @@ html body header .logo {
 }
 html body header .logo > img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 html body header .menu > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 html body header .menu > ul > li {
@@ -207,8 +197,7 @@ html body header .menu > ul > li .dropDown {
   left: 50%;
   z-index: 99;
   text-align: center;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   display: none;
 }
 html body header .menu > ul > li .dropDown > li {
@@ -230,8 +219,7 @@ html body header .menu > ul > li .dropDown > li::after {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: -1;
 }
 html body header .menu > ul > li .dropDown > li:last-child::after {
@@ -249,12 +237,8 @@ html body header .lang {
   width: 114px;
   height: 34px;
   border-radius: 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 0 12px;
   position: relative;
   cursor: pointer;
@@ -272,8 +256,7 @@ html body header .lang::after {
   position: absolute;
   top: 45%;
   right: 12px;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
   pointer-events: none;
 }
 html body header .lang p {
@@ -313,8 +296,7 @@ html body main .swiper-banner {
 html body main .swiper-banner .swiper-wrapper .swiper-slide > img {
   width: 100%;
   display: block;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -347,12 +329,10 @@ html body main .swiper-banner .swiper-button-next::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 html body main .swiper-banner .swiper-button-prev {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
   left: 40px;
   right: unset;
 }
@@ -377,17 +357,12 @@ html body main .swiper-banner .swiper-pagination-horizontal.swiper-pagination-bu
   margin: 0 10px;
 }
 html body main .marquee {
-  -webkit-box-shadow: 0 0 13px 3px #dedede;
-          box-shadow: 0 0 13px 3px #dedede;
+  box-shadow: 0 0 13px 3px #dedede;
   width: 1400px;
   height: 45px;
   border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 0 5px;
   margin: 50px auto 50px;
 }
@@ -396,17 +371,10 @@ html body main .marquee .title {
   width: 100px;
   height: 38px;
   border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 html body main .marquee .title p {
   color: #fff;
@@ -425,54 +393,31 @@ html body main .marquee .textBox p {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  -webkit-animation: marquee 15s linear 0s infinite;
-          animation: marquee 15s linear 0s infinite;
-}
-@-webkit-keyframes marquee {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
+  animation: marquee 15s linear 0s infinite;
 }
 @keyframes marquee {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 html body main .products {
   width: 1400px;
   height: auto;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 0 1fr 0 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 0;
   margin: 0 auto;
 }
 html body main .products li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 html body main .products li > img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 html body main .products li p {
   color: #333;
@@ -490,19 +435,10 @@ html body footer {
   background: #666;
   width: 100%;
   height: 220px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 html body footer .logo {
   width: 155px;
@@ -510,13 +446,43 @@ html body footer .logo {
 }
 html body footer .logo > img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 html body footer p {
   color: #fff;
   font-size: 16px;
   letter-spacing: 1.5px;
+}
+html body aside {
+  position: fixed;
+  top: 50%;
+  right: 55px;
+  z-index: 999;
+  transform: translateY(-50%);
+}
+html body aside .socialList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html body aside .socialList > li {
+  margin: 15px 0;
+}
+html body aside .socialList > li:first-child {
+  margin-top: 0;
+}
+html body aside .socialList > li a > svg {
+  width: 38px;
+  height: 38px;
+}
+html body aside .socialList > li a > svg.faceBook {
+  fill: #07337a;
+}
+html body aside .socialList > li a > svg.instagram {
+  fill: #fd0bb8;
+}
+html body aside .socialList > li a > svg.youtube {
+  fill: #ff0000;
 }
 html body::-webkit-scrollbar {
   width: 8px;
@@ -529,4 +495,4 @@ html body::-webkit-scrollbar-thumb {
 html body::-webkit-scrollbar-track {
   background: #ffffff;
   border-radius: 10px;
-}
+}/*# sourceMappingURL=style.css.map */

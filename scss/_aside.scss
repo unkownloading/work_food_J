@@ -1,0 +1,41 @@
+aside {
+  position: fixed;
+  top: 50%;
+  right: 55px;
+  z-index: 999;
+  transform: translateY(-50%);
+
+
+  .socialList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >li {
+      margin: 15px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      a {
+        >svg {
+          width: 38px;
+          height: 38px;
+
+          &.faceBook {
+            fill: #07337a;
+          }
+
+          &.instagram {
+            fill: #fd0bb8
+          }
+
+          &.youtube {
+            fill: #ff0000;
+          }
+        }
+      }
+    }
+  }
+}
